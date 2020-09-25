@@ -21,8 +21,6 @@ public class JKTVR19ABC {
         
         App app = new App();
         app.run();
-        /*App2 app2 = new App2();
-        app2.run();*/
     }
     
 }

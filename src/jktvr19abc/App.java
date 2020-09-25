@@ -56,7 +56,7 @@ public class App {
            /*водится строковая переменная для просвоения ей елемента 
            *массива a[j]. что бы применить метод isContain = stNew.contains(aa)
            *который проверяет наличие в строке "stNew" строки "аа" */
-           boolean isContain;
+           boolean isCont;
            /**вводим булевую переменнуя isContain, используется в isContain = stNew.contains(aa)
             * и принимает значение 'true' or 'false'*/
            
@@ -66,9 +66,9 @@ public class App {
                 *где сравниваются строки*/
                 aa = Character.toString(a[j]);
                 
-                isContain = stNew.contains(aa);
+                isCont = stNew.contains(aa);
                 
-                if(isContain == false){
+                if(isCont == false){
                    notABC[i] = a[j]; 
                     ++i;
                 }else{
