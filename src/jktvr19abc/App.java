@@ -13,7 +13,7 @@ import java.util.Arrays;
  * @author Juri
  */
 public class App {
-    public void run(char[] notABC) {
+    public void run() {
             /**
          * Создаем массив char c алфавитом abc[33];
          * Просим пользователя ввести строку str
@@ -23,54 +23,70 @@ public class App {
          * если -1 не встречался, то текст содержит все буквы алфавита. 
          * если -1 сработал, то выводим набор символов, которые отсутствуют в тексте.
          */
-        int summ = 0;       
+        /*int summ = 0;*/
+
         Scanner input= new Scanner(System.in);
            System.out.println("ввести текст (фразу) латиницей: ");
-           String st = input.nextLine().toLowerCase();           
-           System.out.println(st);
-           
+           String st = input.nextLine();
+           /*System.out.println(st);*/
+           String stL = st.toLowerCase();
+           /*Метод toLowerCase()
+            *Преобразует все буквы в строке к нижнему регистру.
+            *Метод toLowerCase не применяется к знакам, отличным от букв.*/
+
            System.out.println("Введите алфавит или набор символов для проверки на их наличие в предыдущем тексте (фразе): ");
-           String abc = input.nextLine().toLowerCase();           
-           System.out.println(abc);
+           String abc = input.nextLine(); 
+          /* System.out.println(abc);*/
+           String abcL = abc.toLowerCase();
+
+           String stNew = stL.replaceAll("\\s+","");
+           /*stL.replaceAll("\\s+","")
+           **/
+           /*char []c=stNew.toCharArray();*/
            
-           String stNew = st.replaceAll("\\s+","");
-           char []c=stNew.toCharArray();
-           
-           String abcNew = abc.replaceAll("\\s+","");
+           String abcNew = abcL.replaceAll("\\s+","");
            char []a=abcNew.toCharArray();
-           //dataType[] notABC;
-           char []notABS = { };
+           /*dataType[] notABC; убирает пробелы(//) в строке(s) -
+           * → заменяет их на ""(пусто).
+           */
+           char[] notABC =new char[26];
+           
+           int i=0;
+           String aa ;
+           /*водится строковая переменная для просвоения ей елемента 
+           *массива a[j]. что бы применить метод isContain = stNew.contains(aa)
+           *который проверяет наличие в строке "stNew" строки "аа" */
+           boolean isContain;
+           /**вводим булевую переменнуя isContain, используется в isContain = stNew.contains(aa)
+            * и принимает значение 'true' or 'false'*/
            
             for(int j=0;j<a.length;j++){
+                /*Character.toString(a[j]) переводит в строку (string) a[j](char)
+                *требуется для isContain = stNew.contains(aa)
+                *где сравниваются строки*/
+                aa = Character.toString(a[j]);
                 
-                String aa = Character.toString(a[j]);
-                boolean isContain = stNew.contains(aa);
+                isContain = stNew.contains(aa);
+                
                 if(isContain == false){
-                   int i=0;
                    notABC[i] = a[j]; 
+                    ++i;
+                }else{
+                    
+                    }
                 }
-                
-            }
-           
+
           System.out.println("Введённая фраза: "+st);
           System.out.println("Введённая фраза без пробелов в нижнем регистре: "+stNew);
-          System.out.println("Алфавит иди набор символов для проверки: "+abc);
+          System.out.println("Алфавит или набор символов для проверки: "+abc);
           System.out.println("Алфавит... без пробелов в нижнем регистре: "+abcNew);
           
           /*System.out.println("в слове '"+st+"' буква 'а' встречаеться "+summ+" раз");*/
           System.out.println("В введённой фразе отсутствуют символы: "+Arrays.toString(notABC));
+          /*Arrays.toString(notABC) переводит массив notABC(char) в строку*/
+          /*System.out.println("В введённой фразе отсутствуют символы: "+notABC);*/
+      
     }
-
-
-    
 }
 
-/*for(byte i = 0;i<tempInYear.length;i++){
-            System.out.printf("%2d| ",i+1);
-            for(byte j = 0; j < tempInYear[i].length;j++){
-                System.out.printf("%4d",tempInYear[i][j]);
-                if(tempInYear[i][j]<minT)minT = tempInYear[i][j];
-                if(tempInYear[i][j]>maxT)maxT = tempInYear[i][j];
-            }
-            System.out.println();
-        }*/
+

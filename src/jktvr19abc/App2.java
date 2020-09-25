@@ -8,21 +8,10 @@ package jktvr19abc;
 /**
  *
  * @author Juri
- * 
  */
-public class JKTVR19ABC {
-
-    
-    /**
-     * @param args the command line arguments
-     */
+public class App2 {
     public static void main(String[] args) {
-        // TODO code application logic here
         
-        App app = new App();
-        app.run();
-        /*App2 app2 = new App2();
-        app2.run();*/
     }
     
 }
