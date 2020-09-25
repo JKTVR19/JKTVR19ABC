@@ -76,13 +76,13 @@ public class App {
                     }
                 }
 
-          System.out.println("Введённая фраза: "+st);
+          System.out.println("\nВведённая фраза: "+st);
           System.out.println("Введённая фраза без пробелов в нижнем регистре: "+stNew);
-          System.out.println("Алфавит или набор символов для проверки: "+abc);
+          System.out.println("\nАлфавит или набор символов для проверки: "+abc);
           System.out.println("Алфавит... без пробелов в нижнем регистре: "+abcNew);
           
           /*System.out.println("в слове '"+st+"' буква 'а' встречаеться "+summ+" раз");*/
-          System.out.println("В введённой фразе отсутствуют символы: "+Arrays.toString(notABC));
+          System.out.println("\nВ введённой фразе отсутствуют символы: "+Arrays.toString(notABC));
           /*Arrays.toString(notABC) переводит массив notABC(char) в строку*/
           /*System.out.println("В введённой фразе отсутствуют символы: "+notABC);*/
       

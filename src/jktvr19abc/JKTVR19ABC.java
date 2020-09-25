@@ -26,3 +26,10 @@ public class JKTVR19ABC {
     }
     
 }
+
+/*The quick brown fox jumps over the lazy dog*/
+/*there are even palindromic phrases: "Was it a rat I saw?", 
+*"Go hang a salami I'm a lasagna hog.", 
+*and my favourite: "A man, a plan, a canal: Panama!"*/
+
+/*ABCDEFGHIJKLMNOPQRSTUVWXYZ */
